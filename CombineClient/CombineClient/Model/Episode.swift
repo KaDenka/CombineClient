@@ -7,7 +7,16 @@
 
 import Foundation
 
-public struct Episode: Codable {
+public struct Episode: Codable, CustomStringConvertible {
+    public var description: String {
+    """
+    Episode:
+        self.id = \(id)
+        self.name = \(name)
+        self.episode = \(episode)
+    """
+    }
+    
     
     public var id: Int
     public var name: String

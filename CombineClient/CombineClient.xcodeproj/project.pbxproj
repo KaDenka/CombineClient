@@ -21,6 +21,7 @@
 		CA6F01EE27BA3A1100BC41CF /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01ED27BA3A1100BC41CF /* Episode.swift */; };
 		CA6F01F027BA417E00BC41CF /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01EF27BA417E00BC41CF /* Method.swift */; };
 		CA6F01F227BA41C600BC41CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01F127BA41C600BC41CF /* NetworkError.swift */; };
+		CA6F01F527BA445100BC41CF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01F427BA445100BC41CF /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		CA6F01ED27BA3A1100BC41CF /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		CA6F01EF27BA417E00BC41CF /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		CA6F01F127BA41C600BC41CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CA6F01F427BA445100BC41CF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				CA6F01D227BA308300BC41CF /* ViewController.swift */,
 				CA6F01F327BA42C100BC41CF /* Network */,
 				CA6F01E827BA330B00BC41CF /* Model */,
+				CA6F01F627BA445900BC41CF /* ViewModel */,
 				CA6F01D427BA308300BC41CF /* Main.storyboard */,
 				CA6F01D727BA308500BC41CF /* Assets.xcassets */,
 				CA6F01D927BA308500BC41CF /* LaunchScreen.storyboard */,
@@ -105,6 +108,14 @@
 				CA6F01F127BA41C600BC41CF /* NetworkError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		CA6F01F627BA445900BC41CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA6F01F427BA445100BC41CF /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				CA6F01E727BA32A900BC41CF /* CharacterPage.swift in Sources */,
 				CA6F01EE27BA3A1100BC41CF /* Episode.swift in Sources */,
 				CA6F01F227BA41C600BC41CF /* NetworkError.swift in Sources */,
+				CA6F01F527BA445100BC41CF /* ViewModel.swift in Sources */,
 				CA6F01E327BA31AB00BC41CF /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
