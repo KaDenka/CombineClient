@@ -10,6 +10,7 @@ import Foundation
 public struct Location: Codable, CustomStringConvertible {
     public var description: String {
     """
+    Location:
         self.id = \(id)
         self.name = \(name)
         self.type = \(type)

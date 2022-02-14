@@ -10,6 +10,7 @@ import Foundation
 public struct Character: Codable, CustomStringConvertible {
     public var description: String {
     """
+    Character:
         self.id = \(id)
         self.name = \(name)
         self.status = \(status)

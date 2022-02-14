@@ -10,6 +10,7 @@ import Foundation
 public struct Episode: Codable, CustomStringConvertible {
     public var description: String {
     """
+    Episode:
         self.id = \(id)
         self.name = \(name)
         self.episode = \(episode)

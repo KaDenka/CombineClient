@@ -22,9 +22,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = ViewModel(apiClient: APIClient())
+        let inputedId = textField.publisher(for: \.text).compactMap { $0.flatMap(Int.init) }.eraseToAnyPublisher()
         
-        viewModel?.fetchCharacter(id: 3)
+        viewModel = ViewModel(apiClient: APIClient(), inputIdPublisher: inputedId)
+        
+            viewModel?.character
             .map({ characrer in
                 characrer.description
             })
@@ -39,31 +41,39 @@ class ViewController: UIViewController {
                     
                     
                     
-        viewModel?.fetchLocation(id: 1)
+            viewModel?.location
             .map({ location in
-                location.description
-            })
+                        location.description
+                    })
             .catch({ error in
-                Empty<String, Never>()
-            })
+                        Empty<String, Never>()
+                    })
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] text in
                         self?.locationLabel.text = text
                     })
             .store(in: &subscriptions)
-
-        viewModel?.fetchEpisode(id: 8)
-                    .map({ episode in
+                    
+            viewModel?.episode
+            .map({ episode in
                         episode.description
                     })
-                    .catch({ error in
+            .catch({ error in
                         Empty<String, Never>()
                     })
-                    .receive(on: RunLoop.main)
-                    .sink(receiveValue: { [weak self] text in
-                                self?.episodeLabel.text = text
-                            })
-                    .store(in: &subscriptions)
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [weak self] text in
+                        self?.episodeLabel.text = text
+                    })
+            .store(in: &subscriptions)
+                    
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(resing))
+        view.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func resing() {
+        view.endEditing(true)
+        resignFirstResponder()
     }
 }
 

@@ -11,24 +11,15 @@ import Combine
 class ViewModel {
     
     let apiClient: APIClient
+    //    let inputIdPublisher: AnyPublisher<Int, Never>
+    let character: AnyPublisher<Character, NetworkError>
+    let location: AnyPublisher<Location, NetworkError>
+    let episode: AnyPublisher<Episode, NetworkError>
     
-    internal init(apiClient: APIClient) {
+    internal init(apiClient: APIClient, inputIdPublisher: AnyPublisher<Int, Never>) {
         self.apiClient = apiClient
-    }
-    
-    func fetchCharacter(id: Int) -> AnyPublisher<Character, NetworkError> {
-        apiClient.character(id: id)
-    }
-    
-    func fetchCharacters(ids: [Int]) -> AnyPublisher<Character, NetworkError> {
-        apiClient.mergedCharacters(ids: ids)
-    }
-    
-    func fetchLocation(id: Int) -> AnyPublisher<Location, NetworkError> {
-        apiClient.location(id: id)
-    }
-    
-    func fetchEpisode(id: Int) -> AnyPublisher<Episode, NetworkError> {
-        apiClient.episode(id: id)
+        self.character = inputIdPublisher.map { apiClient.character(id: $0) }.switchToLatest().share().eraseToAnyPublisher()
+        self.location = inputIdPublisher.map { apiClient.location(id: $0) }.switchToLatest().share().eraseToAnyPublisher()
+        self.episode = inputIdPublisher.map { apiClient.episode(id: $0) }.switchToLatest().share().eraseToAnyPublisher()
     }
 }
