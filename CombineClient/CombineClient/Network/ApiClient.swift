@@ -27,6 +27,7 @@ struct APIClient {
                     return NetworkError.invalidResponse
                 }
             })
+            .print("😈 DEBUG:")
             .eraseToAnyPublisher()
     }
     
@@ -57,6 +58,7 @@ struct APIClient {
                     return NetworkError.invalidResponse
                 }
             })
+            .print("🌏 DEBUG:")
             .eraseToAnyPublisher()
     }
     
@@ -74,6 +76,7 @@ struct APIClient {
                     return NetworkError.invalidResponse
                 }
             })
+            .print("🎬 DEBUG:")
             .eraseToAnyPublisher()
     }
 }
