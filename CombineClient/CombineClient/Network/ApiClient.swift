@@ -13,7 +13,7 @@ struct APIClient {
     private let decoder = JSONDecoder()
     private let queue = DispatchQueue(label: "APIClient", qos: .default, attributes: .concurrent)
     
-    func character(id: Int) -> AnyPublisher<Character, Error> {
+    func character(id: Int) -> AnyPublisher<Character, NetworkError> {
         URLSession.shared
             .dataTaskPublisher(for: Method.character(id).url)
             .receive(on: queue)
@@ -30,7 +30,7 @@ struct APIClient {
             .eraseToAnyPublisher()
     }
     
-    func mergedCharacters(ids: [Int]) -> AnyPublisher<Character, Error> {
+    func mergedCharacters(ids: [Int]) -> AnyPublisher<Character, NetworkError> {
         precondition(!ids.isEmpty)
         
         let initialPublisher = character(id: ids[0])
@@ -43,7 +43,7 @@ struct APIClient {
         }
     }
     
-    func location(id: Int) -> AnyPublisher<Location, Error> {
+    func location(id: Int) -> AnyPublisher<Location, NetworkError> {
         URLSession.shared
             .dataTaskPublisher(for: Method.location(id).url)
             .receive(on: queue)
@@ -60,7 +60,7 @@ struct APIClient {
             .eraseToAnyPublisher()
     }
     
-    func episode(id: Int) -> AnyPublisher<Episode, Error> {
+    func episode(id: Int) -> AnyPublisher<Episode, NetworkError> {
         URLSession.shared
             .dataTaskPublisher(for: Method.episode(id).url)
             .receive(on: queue)
