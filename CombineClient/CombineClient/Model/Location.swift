@@ -7,7 +7,16 @@
 
 import Foundation
 
-public struct Location: Codable {
+public struct Location: Codable, CustomStringConvertible {
+    public var description: String {
+    """
+        self.id = \(id)
+        self.name = \(name)
+        self.type = \(type)
+        self.dimension = \(dimension)
+    """
+    }
+    
     
     public var id: Int
     public var name: String

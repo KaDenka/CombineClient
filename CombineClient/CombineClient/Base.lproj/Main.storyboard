@@ -71,6 +71,12 @@
                             <constraint firstItem="TSb-9N-iwg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="kDy-5W-JS8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterLabel" destination="ZcA-iv-iKz" id="l0n-Mc-4UT"/>
+                        <outlet property="episodeLabel" destination="3d7-O2-ADd" id="qVe-4E-xF2"/>
+                        <outlet property="locationLabel" destination="lNC-G7-QYm" id="hXs-Jz-yui"/>
+                        <outlet property="textField" destination="TSb-9N-iwg" id="pMP-7w-i7F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
