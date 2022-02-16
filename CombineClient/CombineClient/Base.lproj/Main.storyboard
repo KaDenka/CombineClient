@@ -130,6 +130,7 @@
                         <outlet property="emojiOne" destination="Onu-ko-bWu" id="Dnm-pp-hvE"/>
                         <outlet property="emojiThree" destination="iYN-eB-PEb" id="WHe-ob-SZ0"/>
                         <outlet property="emojiTwo" destination="FMU-Up-0aG" id="uuR-So-tPe"/>
+                        <outlet property="startButton" destination="Ej5-ea-lhx" id="wvr-Df-vLW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wtv-a5-Wnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CA20AA2F27BCE5C6007DBF01 /* GamblingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20AA2E27BCE5C6007DBF01 /* GamblingViewController.swift */; };
 		CA20AA3327BCE90F007DBF01 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20AA3227BCE90F007DBF01 /* UIViewExtension.swift */; };
+		CA20AA3527BCEBDE007DBF01 /* GamblingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA20AA3427BCEBDE007DBF01 /* GamblingViewModel.swift */; };
 		CA6F01CF27BA308300BC41CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01CE27BA308300BC41CF /* AppDelegate.swift */; };
 		CA6F01D127BA308300BC41CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01D027BA308300BC41CF /* SceneDelegate.swift */; };
 		CA6F01D327BA308300BC41CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01D227BA308300BC41CF /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		CA20AA2E27BCE5C6007DBF01 /* GamblingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamblingViewController.swift; sourceTree = "<group>"; };
 		CA20AA3227BCE90F007DBF01 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		CA20AA3427BCEBDE007DBF01 /* GamblingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamblingViewModel.swift; sourceTree = "<group>"; };
 		CA6F01CB27BA308300BC41CF /* CombineClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6F01CE27BA308300BC41CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA6F01D027BA308300BC41CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6F01F427BA445100BC41CF /* ViewModel.swift */,
+				CA20AA3427BCEBDE007DBF01 /* GamblingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				CA20AA3327BCE90F007DBF01 /* UIViewExtension.swift in Sources */,
 				CA6F01EC27BA394300BC41CF /* Location.swift in Sources */,
 				CA6F01CF27BA308300BC41CF /* AppDelegate.swift in Sources */,
+				CA20AA3527BCEBDE007DBF01 /* GamblingViewModel.swift in Sources */,
 				CA6F01E527BA324900BC41CF /* PageInfo.swift in Sources */,
 				CA6F01D127BA308300BC41CF /* SceneDelegate.swift in Sources */,
 				CA6F01E727BA32A900BC41CF /* CharacterPage.swift in Sources */,
