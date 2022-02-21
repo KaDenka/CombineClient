@@ -27,12 +27,12 @@ class ViewController: UIViewController {
         viewModel = ViewModel(apiClient: APIClient(), inputIdPublisher: inputedId)
         
             viewModel?.character
-            .map({ characrer in
+            .map { characrer in
                 characrer.description
-            })
-            .catch({ error in
+            }
+            .catch { error in
                 Empty<String, Never>()
-            })
+            }
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] text in
                         self?.characterLabel.text = text
@@ -42,12 +42,12 @@ class ViewController: UIViewController {
                     
                     
             viewModel?.location
-            .map({ location in
+            .map { location in
                         location.description
-                    })
-            .catch({ error in
+                    }
+            .catch { error in
                         Empty<String, Never>()
-                    })
+                    }
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] text in
                         self?.locationLabel.text = text
@@ -55,12 +55,12 @@ class ViewController: UIViewController {
             .store(in: &subscriptions)
                     
             viewModel?.episode
-            .map({ episode in
+            .map { episode in
                         episode.description
-                    })
-            .catch({ error in
+                    }
+            .catch { error in
                         Empty<String, Never>()
-                    })
+                    }
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] text in
                         self?.episodeLabel.text = text
