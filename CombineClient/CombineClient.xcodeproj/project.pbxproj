@@ -24,8 +24,19 @@
 		CA6F01F027BA417E00BC41CF /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01EF27BA417E00BC41CF /* Method.swift */; };
 		CA6F01F227BA41C600BC41CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01F127BA41C600BC41CF /* NetworkError.swift */; };
 		CA6F01F527BA445100BC41CF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01F427BA445100BC41CF /* ViewModel.swift */; };
+		CA7C5C2327C8DC4700BEDC4E /* CombineClientUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7C5C2227C8DC4700BEDC4E /* CombineClientUnitTests.swift */; };
 		CAFDADFE27C3A12500826C5E /* PublisherExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDADFD27C3A12500826C5E /* PublisherExtention.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA7C5C2427C8DC4700BEDC4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA6F01C327BA308300BC41CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA6F01CA27BA308300BC41CF;
+			remoteInfo = CombineClient;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CA20AA2E27BCE5C6007DBF01 /* GamblingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamblingViewController.swift; sourceTree = "<group>"; };
@@ -47,11 +58,20 @@
 		CA6F01EF27BA417E00BC41CF /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		CA6F01F127BA41C600BC41CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CA6F01F427BA445100BC41CF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CA7C5C2027C8DC4700BEDC4E /* CombineClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombineClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA7C5C2227C8DC4700BEDC4E /* CombineClientUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineClientUnitTests.swift; sourceTree = "<group>"; };
 		CAFDADFD27C3A12500826C5E /* PublisherExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CA6F01C827BA308300BC41CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7C5C1D27C8DC4700BEDC4E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -83,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6F01CD27BA308300BC41CF /* CombineClient */,
+				CA7C5C2127C8DC4700BEDC4E /* CombineClientTests */,
 				CA6F01CC27BA308300BC41CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6F01CB27BA308300BC41CF /* CombineClient.app */,
+				CA7C5C2027C8DC4700BEDC4E /* CombineClientTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,9 +120,9 @@
 		CA6F01CD27BA308300BC41CF /* CombineClient */ = {
 			isa = PBXGroup;
 			children = (
-				CA20AA3127BCE8F9007DBF01 /* Extension */,
 				CA6F01CE27BA308300BC41CF /* AppDelegate.swift */,
 				CA6F01D027BA308300BC41CF /* SceneDelegate.swift */,
+				CA20AA3127BCE8F9007DBF01 /* Extension */,
 				CA20AA3027BCE5D1007DBF01 /* Controller */,
 				CA6F01F327BA42C100BC41CF /* Network */,
 				CA6F01E827BA330B00BC41CF /* Model */,
@@ -143,6 +165,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CA7C5C2127C8DC4700BEDC4E /* CombineClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA7C5C2227C8DC4700BEDC4E /* CombineClientUnitTests.swift */,
+			);
+			path = CombineClientTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +193,24 @@
 			productReference = CA6F01CB27BA308300BC41CF /* CombineClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CA7C5C1F27C8DC4700BEDC4E /* CombineClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA7C5C2627C8DC4700BEDC4E /* Build configuration list for PBXNativeTarget "CombineClientTests" */;
+			buildPhases = (
+				CA7C5C1C27C8DC4700BEDC4E /* Sources */,
+				CA7C5C1D27C8DC4700BEDC4E /* Frameworks */,
+				CA7C5C1E27C8DC4700BEDC4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA7C5C2527C8DC4700BEDC4E /* PBXTargetDependency */,
+			);
+			name = CombineClientTests;
+			productName = CombineClientTests;
+			productReference = CA7C5C2027C8DC4700BEDC4E /* CombineClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,11 +218,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					CA6F01CA27BA308300BC41CF = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					CA7C5C1F27C8DC4700BEDC4E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CA6F01CA27BA308300BC41CF;
 					};
 				};
 			};
@@ -192,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				CA6F01CA27BA308300BC41CF /* CombineClient */,
+				CA7C5C1F27C8DC4700BEDC4E /* CombineClientTests */,
 			);
 		};
 /* End PBXProject section */
@@ -204,6 +257,13 @@
 				CA6F01DB27BA308500BC41CF /* LaunchScreen.storyboard in Resources */,
 				CA6F01D827BA308500BC41CF /* Assets.xcassets in Resources */,
 				CA6F01D627BA308300BC41CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA7C5C1E27C8DC4700BEDC4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +292,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA7C5C1C27C8DC4700BEDC4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7C5C2327C8DC4700BEDC4E /* CombineClientUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA7C5C2527C8DC4700BEDC4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA6F01CA27BA308300BC41CF /* CombineClient */;
+			targetProxy = CA7C5C2427C8DC4700BEDC4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CA6F01D427BA308300BC41CF /* Main.storyboard */ = {
@@ -426,6 +502,44 @@
 			};
 			name = Release;
 		};
+		CA7C5C2727C8DC4700BEDC4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WBQRF7BRYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dk.CombineClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CombineClient.app/CombineClient";
+			};
+			name = Debug;
+		};
+		CA7C5C2827C8DC4700BEDC4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WBQRF7BRYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dk.CombineClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CombineClient.app/CombineClient";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +557,15 @@
 			buildConfigurations = (
 				CA6F01E027BA308500BC41CF /* Debug */,
 				CA6F01E127BA308500BC41CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA7C5C2627C8DC4700BEDC4E /* Build configuration list for PBXNativeTarget "CombineClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA7C5C2727C8DC4700BEDC4E /* Debug */,
+				CA7C5C2827C8DC4700BEDC4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
