@@ -12,11 +12,14 @@ import Combine
 class CombineClientUnitTests: XCTestCase {
 
     var cancellables = Set<AnyCancellable>()
-    var viewModel: ViewModel!
-    var apiClient: APIClient!
+    
+    let apiClient = APIClient()
+    let inputedId = Just(1).eraseToAnyPublisher()
+    var viewModel: ViewModel?
+    
     
     override func setUp() {
-        viewModel = ViewModel(apiClient: apiClient, inputIdPublisher:)
+        viewModel = ViewModel(apiClient: apiClient, inputIdPublisher: inputedId)
     }
     
     override func setUpWithError() throws {
@@ -29,23 +32,63 @@ class CombineClientUnitTests: XCTestCase {
     
     override func tearDown() {
         cancellables = []
-        viewModel = nil
+      //  viewModel = nil
     }
     
-    func testCollect() {
-        let values = [0, 1, 2]
-        let publisher = values.publisher
+//    func testCollect() {
+//        let values = [0, 1, 2]
+//        let publisher = values.publisher
+//        
+//        publisher
+//            .collect()
+//            .sink(receiveValue: {
+//                XCTAssert(
+//                $0 == values,
+//                "Result was expected to be \(values), but was \($0)"
+//                )
+//            })
+//            .store(in: &cancellables)
+//        
+//    }
+    
+    func testCombineClient() {
         
-        publisher
-            .collect()
-            .sink(receiveValue: {
-                XCTAssert(
-                $0 == values,
-                "Result was expected to be \(values), but was \($0)"
-                )
-            })
+        viewModel?.location
+            .map { location in
+                        location.description
+                    }
+            .catch { error in
+                        Empty<String, Never>()
+                    }
+            .receive(on: RunLoop.main)
+            .print("📲 DEBUG 1st FUNC TEST: ")
+            .sink(receiveValue: { _ in })
             .store(in: &cancellables)
         
+        
+        viewModel?.character
+            .map { location in
+                        location.description
+                    }
+            .catch { error in
+                        Empty<String, Never>()
+                    }
+            .receive(on: RunLoop.main)
+            .print("📲 DEBUG 2nd FUNC TEST: ")
+            .sink(receiveValue: { _ in })
+            .store(in: &cancellables)
+        
+        viewModel?.episode
+            .map { location in
+                        location.description
+                    }
+            .catch { error in
+                        Empty<String, Never>()
+                    }
+            .receive(on: RunLoop.main)
+            .print("📲 DEBUG 3rd FUNC TEST: ")
+            .sink(receiveValue: { _ in })
+            .store(in: &cancellables)
     }
 
 //    func testExample() throws {
