@@ -18,8 +18,11 @@ class ViewModel {
     
     internal init(apiClient: APIClient, inputIdPublisher: AnyPublisher<Int, Never>) {
         self.apiClient = apiClient
-        self.character = inputIdPublisher.map { apiClient.character(id: $0) }.switchToLatest().share().eraseToAnyPublisher()
-        self.location = inputIdPublisher.map { apiClient.location(id: $0) }.switchToLatest().share().eraseToAnyPublisher()
-        self.episode = inputIdPublisher.map { apiClient.episode(id: $0) }.switchToLatest().share().eraseToAnyPublisher()
+        self.character = inputIdPublisher.map { apiClient.character(id: $0) }.switchToLatest().modified()
+            //.share().eraseToAnyPublisher()
+        self.location = inputIdPublisher.map { apiClient.location(id: $0) }.switchToLatest().modified()
+            //.share().eraseToAnyPublisher()
+        self.episode = inputIdPublisher.map { apiClient.episode(id: $0) }.switchToLatest().modified()
+            //.share().eraseToAnyPublisher()
     }
 }

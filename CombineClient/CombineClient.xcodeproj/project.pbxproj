@@ -24,6 +24,7 @@
 		CA6F01F027BA417E00BC41CF /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01EF27BA417E00BC41CF /* Method.swift */; };
 		CA6F01F227BA41C600BC41CF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01F127BA41C600BC41CF /* NetworkError.swift */; };
 		CA6F01F527BA445100BC41CF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F01F427BA445100BC41CF /* ViewModel.swift */; };
+		CAFDADFE27C3A12500826C5E /* PublisherExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFDADFD27C3A12500826C5E /* PublisherExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		CA6F01EF27BA417E00BC41CF /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		CA6F01F127BA41C600BC41CF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		CA6F01F427BA445100BC41CF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		CAFDADFD27C3A12500826C5E /* PublisherExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				CA20AA3227BCE90F007DBF01 /* UIViewExtension.swift */,
+				CAFDADFD27C3A12500826C5E /* PublisherExtention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				CA6F01D127BA308300BC41CF /* SceneDelegate.swift in Sources */,
 				CA6F01E727BA32A900BC41CF /* CharacterPage.swift in Sources */,
 				CA6F01EE27BA3A1100BC41CF /* Episode.swift in Sources */,
+				CAFDADFE27C3A12500826C5E /* PublisherExtention.swift in Sources */,
 				CA6F01F227BA41C600BC41CF /* NetworkError.swift in Sources */,
 				CA6F01F527BA445100BC41CF /* ViewModel.swift in Sources */,
 				CA6F01E327BA31AB00BC41CF /* Character.swift in Sources */,
